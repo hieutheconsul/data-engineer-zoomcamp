@@ -14,8 +14,8 @@ COPY pyproject.toml .python-version uv.lock ./
 
 RUN uv sync --locked
 
-COPY pipeline.py .
+COPY ingest_data.py .
 # # to copy file from local/host
 
-ENTRYPOINT ["uv", "run", "python", "pipeline.py" ] 
+ENTRYPOINT ["uv", "run", "python", "ingest_data.py" ] 
 # to run this file automatically when we run the docker
